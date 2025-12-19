@@ -23,12 +23,6 @@
       "venue": "Theatre Royal",
       "date": "2025-02-14",
       "ticketUrl": "https://example.com/tickets/plymouth"
-    },
-    {
-      "city": "London",
-      "venue": "Albert Hall",
-      "date": "2025-12-31T00:00:00.000+00:00",
-      "ticketUrl": "example.com"
     }
   ]
 }
