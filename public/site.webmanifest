@@ -1,0 +1,9 @@
+{
+  "name": "Something Elfse",
+  "short_name": "Something Elfse",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4EEEC",
+  "theme_color": "#1A280B",
+  "icons": []
+}

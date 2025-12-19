@@ -1,0 +1,22 @@
+{
+  "tracks": [
+    {
+      "title": "Forest Deep",
+      "duration": "4:50",
+      "cover": "/assets/images/Forest-Deep.jpeg",
+      "url": "https://youtu.be/KBVfrlONwYE?si=5JIyzKsqBjPKYYTO"
+    },
+    {
+      "title": "Not Holding Back",
+      "duration": "3:15",
+      "cover": "/assets/images/Not-Holding-Back.jpeg",
+      "url": "https://youtu.be/AR774eafWko?si=u_s-PH1Otg3ZRCtM"
+    },
+    {
+      "title": "Pure Love",
+      "duration": "2:48",
+      "cover": "/assets/images/Pure-Love.jpeg",
+      "url": "https://youtu.be/t8kvPJpS3Gk?si=3UORtwHcEyJ7IhUt"
+    }
+  ]
+}

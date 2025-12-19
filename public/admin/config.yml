@@ -1,0 +1,92 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "Upload “{{path}}”"
+    deleteMedia: "Delete “{{path}}”"
+
+publish_mode: editorial_workflow
+media_folder: "public/assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: settings
+    label: Site Settings
+    files:
+      - name: site
+        label: Site Settings
+        file: public/data/site.json
+        format: json
+        fields:
+          - { label: "Band Name", name: "brand", widget: "string" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Background Image", name: "backgroundImage", widget: "image", allow_multiple: false }
+              - { label: "Foreground Image", name: "foregroundImage", widget: "image", allow_multiple: false }
+          - label: "Tour Section"
+            name: "tour"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Feature Image", name: "featureImage", widget: "image", allow_multiple: false }
+          - label: "Listen Section"
+            name: "listen"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Links"
+            name: "links"
+            widget: "object"
+            fields:
+              - { label: "Spotify", name: "spotify", widget: "string", required: false }
+              - { label: "YouTube", name: "youtube", widget: "string", required: false }
+              - { label: "Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "Shop (optional)", name: "shop", widget: "string", required: false }
+          - { label: "Footer Note", name: "footerNote", widget: "string" }
+
+  - name: tours
+    label: Tour Dates
+    files:
+      - name: tours
+        label: Tour Dates
+        file: public/data/tours.json
+        format: json
+        fields:
+          - label: "Stops"
+            name: "stops"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "City", name: "city", widget: "string" }
+              - { label: "Venue", name: "venue", widget: "string" }
+              - { label: "Date", name: "date", widget: "datetime", time_format: false }
+              - { label: "Ticket URL", name: "ticketUrl", widget: "string" }
+
+  - name: songs
+    label: Songs
+    files:
+      - name: songs
+        label: Songs
+        file: public/data/songs.json
+        format: json
+        fields:
+          - label: "Tracks"
+            name: "tracks"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Duration", name: "duration", widget: "string" }
+              - { label: "Cover Image", name: "cover", widget: "image", required: false, allow_multiple: false }
+              - { label: "Play URL", name: "url", widget: "string" }

@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .hero-text-shadow {
+    text-shadow: 0 0.1875rem 0 rgb(233 233 213 / 1);
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "stops": [
+    {
+      "city": "Cornwall",
+      "venue": "Chyan Cultural Centre",
+      "date": "2025-01-12",
+      "ticketUrl": "https://example.com/tickets/cornwall"
+    },
+    {
+      "city": "Bristol",
+      "venue": "The Hub",
+      "date": "2025-01-25",
+      "ticketUrl": "https://example.com/tickets/bristol"
+    },
+    {
+      "city": "Manchester",
+      "venue": "The Local Arena",
+      "date": "2025-02-06",
+      "ticketUrl": "https://example.com/tickets/manchester"
+    },
+    {
+      "city": "Plymouth",
+      "venue": "Theatre Royal",
+      "date": "2025-02-14",
+      "ticketUrl": "https://example.com/tickets/plymouth"
+    }
+  ]
+}
