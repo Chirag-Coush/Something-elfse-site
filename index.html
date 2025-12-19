@@ -246,6 +246,20 @@
       </div>
     </footer>
 
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", () => {
+          const hasToken =
+            window.location.hash.includes("invite_token=") ||
+            window.location.hash.includes("recovery_token=");
+          if (hasToken) {
+            window.netlifyIdentity.open();
+          }
+        });
+        window.netlifyIdentity.init();
+      }
+    </script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
